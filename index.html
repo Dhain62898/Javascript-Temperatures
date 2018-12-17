@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+  <html>
+  <h>Javascript Temperatures</h>
+  <p>
+    <input type="number" id="temperature" />
+    <button id="f_to_c">F to C</button>
+    <button id="c_to_f">C to F</button>
+  </p>
+  <p id="result"></p>
+		
+	<script>
+		var report = function(celsius, fahrenheit) {
+  	document.getElementById("result").innerHTML = (celsius + "\xbOF="
+    fahrenheit + "\xbOF");
+		};
+		document.getElementById("f_to_c").onclick = function() {
+  	var f = document.getElementById("temperature").value;
+  	report((f - 32) / 1.8, f);
+		};
+		document.getElementById("c_to_f").onclick = function() {
+  	var c = document.getElementById("temperature").value;
+  	report(c, 1.8 * c + 32);
+		};
+		</script>
+  	</html>
+  
